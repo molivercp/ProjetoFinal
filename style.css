@@ -1,0 +1,119 @@
+/* Importação da fonte do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans+KR:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* ====================
+   Estilos Gerais
+==================== */
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+}
+
+/* ====================
+   Rodapé
+==================== */
+footer {
+    margin-top: auto;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.footer-container {
+    width: 100%;
+    padding: 0;
+}
+
+/* ====================
+   Campo de Pesquisa
+==================== */
+#pesquisar {
+    width: 559px;
+    height: 60px;
+}
+
+/* ====================
+   Carrossel
+==================== */
+.carousel-indicators [data-bs-target] {
+    background-color: #9ea2a8;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.carousel-indicators .active {
+    background-color: #C92071;
+}
+
+/* ====================
+   Destaques
+==================== */
+.containerdestaque {
+    width: 405px;
+    height: 251px;
+    border-radius: 8px;
+    background-color: #D8E3F2;
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* ====================
+   Botões e Parágrafos
+==================== */
+.tamanhobotao {
+    width: 153px;
+    height: 48px;
+}
+
+.tamanhop {
+    width: 76px;
+    height: 32px;
+}
+
+/* ====================
+   Produtos
+==================== */
+.card-product {
+    position: relative;
+    border: none;
+    transition: box-shadow 0.3s ease;
+}
+
+.card-product img {
+    height: 150px;
+    object-fit: contain;
+}
+
+.card-product:hover {
+    box-shadow: 0 0 0 2px #a5b4fc;
+}
+
+.badge-desconto {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #c0ff80;
+    color: #000;
+    font-weight: bold;
+}
+
+/* ====================
+   Utilidades
+==================== */
+.rotated {
+    transform: rotate(-19deg);
+}

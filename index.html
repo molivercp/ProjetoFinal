@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Digital Store</title>
+    <link rel="shortcut icon" href="img/logoDC.svg" type="image/x-icon" />
+
+    <!-- Estilos CSS externos -->
+    <link rel="stylesheet" type="ico" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-light d-flex flex-column min-vh-100">
+    <!-- Cabeçalho principal com navegação -->
+    <header>
+      <!-- Navegação principal -->
+      <nav class="navbar navbar-expand-lg" style="background-color: #ffffff">
+        <div class="container-lg d-flex">
+          <!-- Logo da loja -->
+          <a
+            class="navbar-brand ps-3"
+            href="#"
+            style="
+              color: #c92071;
+              font-size: 36px;
+              font-family: Inter;
+              font-weight: 600;
+            "
+          >
+            <img class="pb-2" src="img/logoDC.svg" alt="Logo Digital Store" />
+            Digital Store
+          </a>
+
+          <!-- Campo de pesquisa -->
+          <div class="position-relative mx-5" style="max-width: 559px">
+            <input
+              type="text"
+              class="form-control pe-5"
+              placeholder="Pesquisar"
+              aria-label="Pesquisar"
+              id="pesquisar"
+            />
+            <button
+              type="button"
+              class="btn position-absolute top-50 end-0 translate-middle-y me-3 p-0 border-0 bg-transparent"
+            >
+              <i class="bi bi-search" style="color: #333; font-size: 20px"></i>
+            </button>
+          </div>
+
+          <!-- Botão para menu mobile -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- Itens de navegação principal -->
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto align-items-center">
+              <li class="nav-item">
+                <a
+                  class="nav-link active text-dark text-decoration-underline align-items-center me-5"
+                  href="#"
+                  >Cadastre-se</a
+                >
+              </li>
+              <li class="nav-item">
+                <button
+                  class="btn me-5"
+                  style="background-color: #c92071; color: white"
+                >
+                  Entrar
+                </button>
+              </li>
+              <li class="nav-item">
+                <button class="btn">
+                  <i
+                    class="bi bi-cart"
+                    style="color: #c92071; font-size: 30px"
+                  ></i>
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Navegação secundária para categorias -->
+      <nav class="pt-3 pb-4" style="background-color: #ffffff" id="segundanav">
+        <div class="container">
+          <ul class="navbar-nav ms-auto d-flex flex-row">
+            <li class="nav-item me-4" style="color: #c92071">Home</li>
+            <li class="nav-item me-4">Produtos</li>
+            <li class="nav-item me-4">Categorias</li>
+            <li class="nav-item">Meus pedidos</li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Conteúdo principal -->
+    <main class="flex-grow-1">
+      <!-- Seção do carrossel principal -->
+      <section id="banner-principal">
+        <div id="nikeCarousel" class="carousel slide" data-bs-ride="carousel">
+          <!-- Indicadores do carrossel -->
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#nikeCarousel"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#nikeCarousel"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#nikeCarousel"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+          </div>
+
+          <!-- Slides do carrossel -->
+          <div class="carousel-inner">
+            <!-- Slide 1 -->
+            <div class="carousel-item active">
+              <div class="container-fluid py-5">
+                <div class="row align-items-center justify-content-around ps-5">
+                  <!-- Conteúdo textual do slide -->
+                  <div
+                    class="col-lg-5 col-12 mt-4 mt-lg-0 d-flex flex-column gap-3 ps-3 ms-5"
+                  >
+                    <p
+                      class="text-uppercase fw-bold text-warning"
+                      style="font-size: 14px"
+                    >
+                      Melhores ofertas personalizadas
+                    </p>
+                    <h3
+                      class="fw-bold text-dark-gray"
+                      style="font-size: 3rem; letter-spacing: 0.1rem"
+                    >
+                      Queima de <br />estoque Nike
+                    </h3>
+                    <p class="text-secondary" style="font-family: Inter">
+                      Tênis Nike Air com até 50% de desconto! Aproveite por
+                      tempo limitado.
+                    </p>
+                    <div>
+                      <button
+                        class="btn text-light"
+                        style="background-color: #c92071"
+                      >
+                        Ver Ofertas
+                      </button>
+                    </div>
+                  </div>
+                  <!-- Imagem do produto em destaque -->
+                  <div
+                    class="col-lg-6 col-12 d-flex justify-content-center align-items-center pe-5 me-5"
+                  >
+                    <div
+                      class="d-flex justify-content-center align-items-center rotated"
+                      style="width: 80%; aspect-ratio: 1"
+                    >
+                      <img
+                        src="img/nike air.png"
+                        alt="Banner Nike Air"
+                        class="img-fluid w-100 me-5"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="carousel-item">
+              <div class="container-fluid py-5">
+                <div class="row align-items-center justify-content-around ps-5">
+                  <!-- Conteúdo textual do slide -->
+                  <div
+                    class="col-lg-5 col-12 mt-4 mt-lg-0 d-flex flex-column gap-3 ps-3 ms-5"
+                  >
+                    <p
+                      class="text-uppercase fw-bold text-warning"
+                      style="font-size: 14px"
+                    >
+                      Melhores ofertas personalizadas
+                    </p>
+                    <h3
+                      class="fw-bold text-dark-gray"
+                      style="font-size: 3rem; letter-spacing: 0.1rem"
+                    >
+                      Queima de <br />estoque Nike
+                    </h3>
+                    <p class="text-secondary" style="font-family: Inter">
+                      Tênis Nike Air com até 50% de desconto! Aproveite por
+                      tempo limitado.
+                    </p>
+                    <div>
+                      <button
+                        class="btn text-light"
+                        style="background-color: #c92071"
+                      >
+                        Ver Ofertas
+                      </button>
+                    </div>
+                  </div>
+                  <!-- Imagem do produto em destaque -->
+                  <div
+                    class="col-lg-6 col-12 d-flex justify-content-center align-items-center pe-5 me-5"
+                  >
+                    <div
+                      class="d-flex justify-content-center align-items-center rotated"
+                      style="width: 80%; aspect-ratio: 1"
+                    >
+                      <img
+                        src="img/nike air.png"
+                        alt="Banner Nike Air Max"
+                        class="img-fluid w-100 me-5"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="carousel-item">
+              <div class="container-fluid py-5">
+                <div class="row align-items-center justify-content-around ps-5">
+                  <!-- Conteúdo textual do slide -->
+                  <div
+                    class="col-lg-5 col-12 mt-4 mt-lg-0 d-flex flex-column gap-3 ps-3 ms-5"
+                  >
+                    <p
+                      class="text-uppercase fw-bold text-warning"
+                      style="font-size: 14px"
+                    >
+                      Melhores ofertas personalizadas
+                    </p>
+                    <h3
+                      class="fw-bold text-dark-gray"
+                      style="font-size: 3rem; letter-spacing: 0.1rem"
+                    >
+                      Queima de <br />estoque Nike
+                    </h3>
+                    <p class="text-secondary" style="font-family: Inter">
+                      Tênis Nike Air com até 50% de desconto! Aproveite por
+                      tempo limitado.
+                    </p>
+                    <div>
+                      <button
+                        class="btn text-light"
+                        style="background-color: #c92071"
+                      >
+                        Ver Ofertas
+                      </button>
+                    </div>
+                  </div>
+                  <!-- Imagem do produto em destaque -->
+                  <div
+                    class="col-lg-6 col-12 d-flex justify-content-center align-items-center pe-5 me-5"
+                  >
+                    <div
+                      class="d-flex justify-content-center align-items-center rotated"
+                      style="width: 80%; aspect-ratio: 1"
+                    >
+                      <img
+                        src="img/nike air.png"
+                        alt="Banner Nike Revolution"
+                        class="img-fluid w-100 me-5"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Seção de coleções em destaque -->
+      <section class="colecoes-destaque">
+        <div class="container my-5">
+          <h2 style="font-size: 24px; color: #474747">Coleções em destaque</h2>
+          <div class="d-flex gap-3 flex-wrap justify-content-center">
+            <!-- Card 1 - Supreme -->
+            <article
+              class="d-flex align-items-center p-3 rounded-4"
+              style="
+                background-color: #e6f0fc;
+                width: 405px;
+                height: 251px;
+                overflow: hidden;
+              "
+            >
+              <div class="pe-3">
+                <p
+                  class="d-flex justify-content-center align-items-center rounded-4"
+                  style="
+                    background-color: #e7ff86;
+                    font-size: 14px;
+                    width: fit-content;
+                    padding: 4px 10px;
+                  "
+                >
+                  30% OFF
+                </p>
+                <h3 class="mt-2 mb-2" style="font-size: 32px">
+                  Novo drop <br />
+                  Supreme
+                </h3>
+                <button
+                  class="btn bg-light btn-sm"
+                  style="
+                    width: 153px;
+                    height: 48px;
+                    font-size: 16px;
+                    color: #c92071;
+                  "
+                >
+                  Comprar
+                </button>
+              </div>
+              <img
+                class="rotated"
+                src="img/camisa.png"
+                alt="Camisa Supreme"
+                style="width: 250px; margin-top: 150px; margin-left: 10px"
+              />
+            </article>
+
+            <!-- Card 2 - Adidas -->
+            <article
+              class="d-flex align-items-center p-3 rounded-4"
+              style="
+                background-color: #e6f0fc;
+                width: 405px;
+                height: 251px;
+                overflow: hidden;
+              "
+            >
+              <div class="pe-3">
+                <p
+                  class="d-flex justify-content-center align-items-center rounded-4"
+                  style="
+                    background-color: #e7ff86;
+                    font-size: 14px;
+                    width: fit-content;
+                    padding: 4px 10px;
+                  "
+                >
+                  30% OFF
+                </p>
+                <h3 class="mt-2 mb-2" style="font-size: 32px">
+                  Coleção <br />
+                  Adidas
+                </h3>
+                <button
+                  class="btn bg-light btn-sm"
+                  style="
+                    width: 153px;
+                    height: 48px;
+                    font-size: 16px;
+                    color: #c92071;
+                  "
+                >
+                  Comprar
+                </button>
+              </div>
+              <img
+                src="img/tenis2.png"
+                alt="Tênis Adidas"
+                style="width: 230px; margin-top: 120px"
+              />
+            </article>
+
+            <!-- Card 3 - Beats -->
+            <article
+              class="d-flex align-items-center p-3 rounded-4"
+              style="
+                background-color: #e6f0fc;
+                width: 405px;
+                height: 251px;
+                overflow: hidden;
+              "
+            >
+              <div class="pe-3">
+                <p
+                  class="d-flex justify-content-center align-items-center rounded-4"
+                  style="
+                    background-color: #e7ff86;
+                    font-size: 14px;
+                    width: fit-content;
+                    padding: 4px 10px;
+                  "
+                >
+                  30% OFF
+                </p>
+                <h3 class="mt-2 mb-2" style="font-size: 32px">
+                  Novo <br />
+                  Beats Bass
+                </h3>
+                <button
+                  class="btn bg-light btn-sm"
+                  style="
+                    width: 153px;
+                    height: 48px;
+                    font-size: 16px;
+                    color: #c92071;
+                  "
+                >
+                  Comprar
+                </button>
+              </div>
+              <img
+                src="img/head.png"
+                alt="Fones Beats"
+                style="
+                  width: 200px;
+                  transform: rotate(25deg);
+                  margin-top: 60px;
+                  margin-left: 40px;
+                "
+              />
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Seção de categorias de produtos -->
+      <section class="categorias mt-5">
+        <div class="d-flex justify-content-center mb-4">
+          <h2 style="font-size: 24px">Categorias em destaque</h2>
+        </div>
+        <div class="d-flex justify-content-center">
+          <div
+            style="width: 712px; height: 138px"
+            class="d-flex justify-content-between"
+          >
+            <!-- Lista de categorias com ícones -->
+            <a href="" class="text-decoration-none text-black">
+              <figure>
+                <img
+                  class="ms-2 mb-2"
+                  src="img/Group 53586.png"
+                  alt="Ícone Camisetas"
+                  style="width: 64px; height: 64px"
+                />
+                <figcaption class="text-center">Camisetas</figcaption>
+              </figure>
+            </a>
+            <a href="" class="text-decoration-none text-black">
+              <figure>
+                <img
+                  class="mb-2"
+                  src="img/Group 53586 (1).png"
+                  alt="Ícone Calças"
+                  style="width: 64px; height: 64px"
+                />
+                <figcaption class="text-center">Calças</figcaption>
+              </figure>
+            </a>
+            <a href="" class="text-decoration-none text-black">
+              <figure>
+                <img
+                  class="mb-2"
+                  src="img/Group 53586 (2).png"
+                  alt="Ícone Bonés"
+                  style="width: 64px; height: 64px"
+                />
+                <figcaption class="text-center">Bonés</figcaption>
+              </figure>
+            </a>
+            <a href="" class="text-decoration-none text-black">
+              <figure>
+                <img
+                  class="ms-3 mb-2"
+                  src="img/Group 53586 (3).png"
+                  alt="Ícone Headphones"
+                  style="width: 64px; height: 64px"
+                />
+                <figcaption class="text-center">Headphones</figcaption>
+              </figure>
+            </a>
+            <a href="" class="text-decoration-none text-black">
+              <figure>
+                <img
+                  class="mb-2"
+                  src="img/Group 53586 (4).png"
+                  alt="Ícone Tênis"
+                  style="width: 64px; height: 64px"
+                />
+                <figcaption class="text-center">Tênis</figcaption>
+              </figure>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Seção de produtos em alta -->
+      <section class="produtos-em-alta">
+        <div class="container py-5">
+          <div class="d-flex justify-content-between align-items-center mb-4">
+            <h2 class="fw-bold">Produtos em alta</h2>
+            <a href="#" class="text-decoration-none text-danger">Ver todos →</a>
+          </div>
+
+          <div class="row g-4">
+            <!-- Produto 1 -->
+            <article class="col-6 col-md-4 col-lg-3">
+              <div
+                class="card card-product p-3 text-center d-flex justify-content-center"
+                style="width: 292px; height: 321px"
+              >
+                <span class="badge badge-desconto rounded-pill px-3 py-1"
+                  >30% OFF</span
+                >
+                <img
+                  src="img/tenisbranco.png"
+                  alt="Tênis K-Swiss"
+                  class="img-fluid mb-3 rotated"
+                />
+              </div>
+              <small class="text-muted">Tênis</small>
+              <h3 class="mb-0" style="font-size: 24px">
+                K-Swiss V8 - Masculino
+              </h3>
+              <div>
+                <s class="text-muted">$200</s>
+                <strong style="font-size: 22px">$100</strong>
+              </div>
+            </article>
+
+            <!-- Produto 2 -->
+            <article class="col-6 col-md-4 col-lg-3">
+              <div
+                class="card card-product p-3 text-center d-flex justify-content-center"
+                style="width: 292px; height: 321px"
+              >
+                <span class="badge badge-desconto rounded-pill px-3 py-1"
+                  >30% OFF</span
+                >
+                <img
+                  src="img/tenisbranco.png"
+                  alt="Tênis K-Swiss"
+                  class="img-fluid mb-3 rotated"
+                />
+              </div>
+              <small class="text-muted">Tênis</small>
+              <h3 class="mb-0" style="font-size: 24px">
+                K-Swiss V8 - Masculino
+              </h3>
+              <div>
+                <s class="text-muted">$200</s>
+                <strong style="font-size: 22px">$100</strong>
+              </div>
+            </article>
+
+            <!-- Produto 3 -->
+            <article class="col-6 col-md-4 col-lg-3">
+              <div
+                class="card card-product p-3 text-center d-flex justify-content-center"
+                style="width: 292px; height: 321px"
+              >
+                <img
+                  src="img/tenisbranco.png"
+                  alt="Tênis K-Swiss"
+                  class="img-fluid mb-3 rotated"
+                />
+              </div>
+              <small class="text-muted">Tênis</small>
+              <h3 class="mb-0" style="font-size: 24px">
+                K-Swiss V8 - Masculino
+              </h3>
+              <div>
+                <s class="text-muted">$200</s>
+                <strong style="font-size: 22px">$100</strong>
+              </div>
+            </article>
+
+            <!-- Produto 4 -->
+            <article class="col-6 col-md-4 col-lg-3">
+              <div
+                class="card card-product p-3 text-center d-flex justify-content-center"
+                style="width: 292px; height: 321px"
+              >
+                <img
+                  src="img/tenisbranco.png"
+                  alt="Tênis K-Swiss"
+                  class="img-fluid mb-3 rotated"
+                />
+              </div>
+              <small class="text-muted">Tênis</small>
+              <h3 class="mb-0" style="font-size: 24px">
+                K-Swiss V8 - Masculino
+              </h3>
+              <div>
+                <s class="text-muted">$200</s>
+                <strong style="font-size: 22px">$100</strong>
+              </div>
+            </article>
+
+            <!-- Produto 5 -->
+            <article class="col-6 col-md-4 col-lg-3">
+              <div
+                class="card card-product p-3 text-center d-flex justify-content-center"
+                style="width: 292px; height: 321px"
+              >
+                <img
+                  src="img/tenisbranco.png"
+                  alt="Tênis K-Swiss"
+                  class="img-fluid mb-3 rotated"
+                />
+              </div>
+              <small class="text-muted">Tênis</small>
+              <h3 class="mb-0" style="font-size: 24px">
+                K-Swiss V8 - Masculino
+              </h3>
+              <div>
+                <s class="text-muted">$200</s>
+                <strong style="font-size: 22px">$100</strong>
+              </div>
+            </article>
+
+            <!-- Produto 6 -->
+            <article class="col-6 col-md-4 col-lg-3">
+              <div
+                class="card card-product p-3 text-center d-flex justify-content-center"
+                style="width: 292px; height: 321px"
+              >
+                <img
+                  src="img/tenisbranco.png"
+                  alt="Tênis K-Swiss"
+                  class="img-fluid mb-3 rotated"
+                />
+              </div>
+              <small class="text-muted">Tênis</small>
+              <h3 class="mb-0" style="font-size: 24px">
+                K-Swiss V8 - Masculino
+              </h3>
+              <div>
+                <s class="text-muted">$200</s>
+                <strong style="font-size: 22px">$100</strong>
+              </div>
+            </article>
+
+            <!-- Produto 7 -->
+            <article class="col-6 col-md-4 col-lg-3">
+              <div
+                class="card card-product p-3 text-center d-flex justify-content-center"
+                style="width: 292px; height: 321px"
+              >
+                <img
+                  src="img/tenisbranco.png"
+                  alt="Tênis K-Swiss"
+                  class="img-fluid mb-3 rotated"
+                />
+              </div>
+              <small class="text-muted">Tênis</small>
+              <h3 class="mb-0" style="font-size: 24px">
+                K-Swiss V8 - Masculino
+              </h3>
+              <div>
+                <s class="text-muted">$200</s>
+                <strong style="font-size: 22px">$100</strong>
+              </div>
+            </article>
+
+            <!-- Produto 8 -->
+            <article class="col-6 col-md-4 col-lg-3">
+              <div
+                class="card card-product p-3 text-center d-flex justify-content-center"
+                style="width: 292px; height: 321px"
+              >
+                <img
+                  src="img/tenisbranco.png"
+                  alt="Tênis K-Swiss"
+                  class="img-fluid mb-3 rotated"
+                />
+              </div>
+              <small class="text-muted">Tênis</small>
+              <h3 class="mb-0" style="font-size: 24px">
+                K-Swiss V8 - Masculino
+              </h3>
+              <div>
+                <s class="text-muted">$200</s>
+                <strong style="font-size: 22px">$100</strong>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Seção de oferta especial -->
+      <section
+        class="oferta-destaque pb-5 pt-5"
+        style="background-color: white"
+      >
+        <div class="container">
+          <div class="img-circle-bg position-relative">
+            <div class="elipse-gradiente"></div>
+            <div class="row align-items-center">
+              <!-- Imagem do produto em destaque -->
+              <div class="col-md-6 d-flex justify-content-center">
+                <div class="img-circle-bg">
+                  <img
+                    src="img/tenisverde.png"
+                    alt="Tênis Air Jordan"
+                    class="img-tenis"
+                    style="width: 573px; height: 330px"
+                  />
+                </div>
+              </div>
+
+              <!-- Informações da oferta especial -->
+              <div class="col-md-6">
+                <p class="text-danger fw-semibold">Oferta especial</p>
+                <h2 class="fw-bold">Air Jordan edição de colecionador</h2>
+                <p class="text-secondary">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip
+                </p>
+                <button
+                  class="btn text-light"
+                  style="background-color: #c92071"
+                >
+                  Ver Oferta
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Rodapé do site -->
+    <footer class="bg-black text-white pt-5 mt-auto">
+      <div class="container-fluid px-0">
+        <div class="container">
+          <div class="row text-start">
+            <!-- Logo e descrição -->
+            <div class="col-md-4 mb-4">
+              <div class="d-flex align-items-start mb-3">
+                <img
+                  src="img/logo footer.png"
+                  alt="Logo"
+                  class="me-2"
+                  style="width: 24px"
+                />
+                <h5 class="fw-semibold">Digital Store</h5>
+              </div>
+              <p class="text-white-50">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore.
+              </p>
+              <div class="d-flex gap-3 mt-3">
+                <a href="" class="text-white fs-5"
+                  ><i class="bi bi-facebook"></i
+                ></a>
+                <a href="" class="text-white fs-5"
+                  ><i class="bi bi-instagram"></i
+                ></a>
+                <a href="" class="text-white fs-5"
+                  ><i class="bi bi-twitter"></i
+                ></a>
+              </div>
+            </div>
+
+            <!-- Informação -->
+            <div class="col-md-2 mb-4">
+              <h6 class="fw-semibold">Informação</h6>
+              <ul class="list-unstyled mt-3">
+                <li>
+                  <a href="" class="text-white-50 text-decoration-none"
+                    >Sobre Drip Store</a
+                  >
+                </li>
+                <li>
+                  <a href="" class="text-white-50 text-decoration-none"
+                    >Segurança</a
+                  >
+                </li>
+                <li>
+                  <a href="" class="text-white-50 text-decoration-none"
+                    >Wishlist</a
+                  >
+                </li>
+                <li>
+                  <a href="" class="text-white-50 text-decoration-none">Blog</a>
+                </li>
+                <li>
+                  <a href="" class="text-white-50 text-decoration-none"
+                    >Trabalhe conosco</a
+                  >
+                </li>
+                <li>
+                  <a href="" class="text-white-50 text-decoration-none"
+                    >Meus Pedidos</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <!-- Categorias -->
+            <div class="col-md-2 mb-4">
+              <h6 class="fw-semibold">Categorias</h6>
+              <ul class="list-unstyled mt-3">
+                <li>
+                  <a href="" class="text-white-50 text-decoration-none"
+                    >Camisetas</a
+                  >
+                </li>
+                <li>
+                  <a href="" class="text-white-50 text-decoration-none"
+                    >Calças</a
+                  >
+                </li>
+                <li>
+                  <a href="" class="text-white-50 text-decoration-none"
+                    >Bonés</a
+                  >
+                </li>
+                <li>
+                  <a href="" class="text-white-50 text-decoration-none"
+                    >Headphones</a
+                  >
+                </li>
+                <li>
+                  <a href="" class="text-white-50 text-decoration-none"
+                    >Tênis</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <!-- Contato -->
+            <div class="col-md-4 mb-4">
+              <h6 class="fw-semibold">Contato</h6>
+              <p class="text-white-50 mt-3">
+                Av. Santos Dumont, 1510 – 1 andar – Aldeota, Fortaleza – CE,
+                60150-161
+              </p>
+              <p class="text-white-50">(85) 3051-3411</p>
+            </div>
+          </div>
+
+          <hr class="border-secondary" />
+
+          <!-- Direitos -->
+          <div class="text-center py-3">
+            <span class="text-white-50">&copy; 2025 Geração Tech</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
